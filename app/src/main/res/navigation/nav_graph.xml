@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/overViewFragment">
+
+    <fragment
+        android:id="@+id/overViewFragment"
+        android:name="com.eneselcuk.connecttointernet.overview.OverViewFragment"
+        android:label="OverViewFragment"
+        tools:layout="@layout/fragment_overview">
+        <action
+            android:id="@+id/action_overViewFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.eneselcuk.connecttointernet.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="mars"
+            app:argType="com.eneselcuk.connecttointernet.network.model.MarsData" />
+    </fragment>
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="marsData"
+            type="com.eneselcuk.connecttointernet.network.model.MarsData" />
+
+        <variable
+            name="click"
+            type="com.eneselcuk.connecttointernet.overview.adapter.PhotoGridAdapter.ClickListener" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> click.clickListener(marsData)}">
+
+        <ImageView
+            android:id="@+id/mars_image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{marsData.img_src}"
+            tools:src="@tools:sample/backgrounds/scenic" />
+    </FrameLayout>
+
+
+</layout>
