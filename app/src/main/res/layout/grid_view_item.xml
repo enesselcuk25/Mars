@@ -30,6 +30,4 @@
             app:imageUrl="@{marsData.img_src}"
             tools:src="@tools:sample/backgrounds/scenic" />
     </FrameLayout>
-
-
 </layout>
